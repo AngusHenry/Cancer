@@ -46,15 +46,23 @@ public class Cancer {
     //border and remove the blob at that location
     //NOTE: if a blank is chosen, the blob size is 0
     //and nothing is removed
-    int blobRow = (int) (Math.random() * 10 + 1);
-    int blobCol = (int) (Math.random() * 10 + 1);
-
-    System.out.println("The blob at " + blobRow + "," + blobCol
-      + " will be removed.");
+    
+         for (row = 1; row < 11; row++) {
+      for (col = 1; col < 11; col++) {
+        int blobRow = row;
+    int blobCol = col;
     floodFill(blobRow, blobCol);
-    System.out.println("The blob had " + blobSize +
-      " items in it");
-    System.out.println("The new grid is:");
+      }
+    }
+//    int blobRow = (int) (Math.random() * 10 + 1);
+//    int blobCol = (int) (Math.random() * 10 + 1);
+//
+//    System.out.println("The blob at " + blobRow + "," + blobCol
+//      + " will be removed.");
+//    floodFill(blobRow, blobCol);
+//    System.out.println("The blob had " + blobSize +
+//      " items in it");
+//    System.out.println("The new grid is:");
     //Print out the new grid
     displayGrid();
   }
